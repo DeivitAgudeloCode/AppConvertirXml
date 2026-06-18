@@ -17,13 +17,21 @@ El sistema identifica automáticamente cada nodo <ROW>, aplica las transformacio
 
 **Después**
 tw.local.sevenTodo = new tw.object.listOf.SevenTodo();
+
 tw.local.sevenTodo[0] = new tw.object.SevenTodo();
+
 var fechaTmp = '2025/12/31';
+
 tw.local.sevenTodo[0].FECHA = new TWDate();
+
 tw.local.sevenTodo[0].FECHA.parse(fechaTmp,"yyyy/MM/dd");
+
 tw.local.sevenTodo[0].CUENTA = '28101501';
+
 tw.local.sevenTodo[0].CUENTA_NOMBRE = 'DEPOSITOS PARA FUTUROS SERVICIOS';
+
 tw.local.sevenTodo[0].DEBITO = '672967';
+
 tw.local.sevenTodo[0].CREDITO = '0';
 
 ✨ Características
