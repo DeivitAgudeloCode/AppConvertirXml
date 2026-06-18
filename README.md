@@ -7,15 +7,19 @@ Esta herramienta fue creada para automatizar la conversión de información cont
 El sistema identifica automáticamente cada nodo <ROW>, aplica las transformaciones configuradas en el archivo de reglas y genera el script final listo para ser utilizado.
 
 **Antes**
+
 <ROW>
+    
     <FECHA>2025/12/31</FECHA>
     <CUENTA>28101501</CUENTA>
     <CUENTA_NOMBRE>DEPOSITOS PARA FUTUROS SERVICIOS</CUENTA_NOMBRE>
     <DEBITO>672967</DEBITO>
     <CREDITO>0</CREDITO>
+    
 </ROW>
 
 **Después**
+
 tw.local.sevenTodo = new tw.object.listOf.SevenTodo();
 
 tw.local.sevenTodo[0] = new tw.object.SevenTodo();
@@ -47,6 +51,7 @@ tw.local.sevenTodo[0].CREDITO = '0';
 ✅ Escalable para miles de registros
 
 🏗️ Arquitectura
+
 XML
  │
  ▼
@@ -65,6 +70,7 @@ Generación TW Object
 Resultado Final
 
 📁 Estructura del Proyecto
+
 ConvertirXml
 │
 ├── Components
@@ -93,6 +99,7 @@ ConvertirXml
 Toda la lógica de conversión es configurable mediante:
 
 reglas.mapeo.json
+
 Ejemplo
 {
   "rowTag": "ROW",
@@ -109,12 +116,14 @@ Ejemplo
 }
 
 🔄 Transformaciones Disponibles
+
 Transformación	Descripción
 trim	Elimina espacios sobrantes
 upper	Convierte a mayúsculas
 lower	Convierte a minúsculas
 
 Ejemplo
+
 {
     "tag": "CUENTA_NOMBRE",
     "format": "upper"
@@ -122,17 +131,23 @@ Ejemplo
 
 Resultado:
 DEPOSITOS PARA FUTUROS SERVICIOS
+
 📅 Manejo de Fechas
 
 Entrada XML:
+
 <FECHA>2025/12/31</FECHA>
 
 Salida:
+
 var fechaTmp = '2025/12/31';
+
 tw.local.sevenTodo[0].FECHA = new TWDate();
+
 tw.local.sevenTodo[0].FECHA.parse(fechaTmp,"yyyy/MM/dd");
 
 ⚡ Rendimiento
+
 La aplicación fue optimizada para trabajar con grandes volúmenes de información mediante:
 
 Procesamiento asíncrono (Task.Run)
@@ -143,6 +158,7 @@ Procesamiento dinámico de nodos XML
 Compatibilidad con miles de registros <ROW>
 
 🖥️ Tecnologías Utilizadas
+
 Tecnología | Versión
 .NET     |   8
 Blazor Server  |	.NET 8
@@ -152,6 +168,7 @@ System.Text.Json    |	Integrado
 JavaScript Interop    |	Integrado
 
 🚀 Ejecución Local
+
 Restaurar dependencias
 dotnet restore
 Ejecutar aplicación
