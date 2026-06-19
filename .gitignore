@@ -480,3 +480,28 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# NuGet
+packages/
+
+# Publicación
+publish/
+
+# Archivos temporales
+*.tmp
+*.cache
